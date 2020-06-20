@@ -1,0 +1,38 @@
+➜  devops-with-docker git:(master) ✗ docker run devopsdockeruh/exec_bash_exercise
+Unable to find image 'devopsdockeruh/exec_bash_exercise:latest' locally
+latest: Pulling from devopsdockeruh/exec_bash_exercise
+1c6172af85ee: Pull complete
+b194b0e3c928: Pull complete
+1f5ec00f35d5: Pull complete
+93b1353672b6: Pull complete
+3d7f38db3cca: Pull complete
+21e102f9fe89: Pull complete
+d851ffed797c: Pull complete
+a45031e28c68: Pull complete
+ca3c1414856f: Pull complete
+02c74c9936fd: Pull complete
+ddb55f8ab0a8: Pull complete
+Digest: sha256:d38b6f6b0eed2880e25c9eb7f83f1cd016ffe3a56c9a3fec6e7bee480bf1ed0f
+Status: Downloaded newer image for devopsdockeruh/exec_bash_exercise:latest
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+
+
+➜  ~ docker ps
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS               NAMES
+9d1224fe955b        devopsdockeruh/exec_bash_exercise   "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes                            wizardly_blackwell
+
+➜  ~ docker exec -it wizardly_blackwell sh -c 'tail -f ./logs.txt'
+Sat, 20 Jun 2020 16:12:38 GMT
+Secret message is:
+"Docker is easy"
+Sat, 20 Jun 2020 16:12:44 GMT
+Sat, 20 Jun 2020 16:12:47 GMT
+Sat, 20 Jun 2020 16:12:50 GMT
+Sat, 20 Jun 2020 16:12:53 GMT
+Secret message is:
+"Docker is easy"
+Sat, 20 Jun 2020 16:12:59 GMT
