@@ -1,0 +1,39 @@
+➜  ~ docker run -d  -it --name website-it ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+cc1a05b1866f6b9cb47f0bac82233c7b132ba50ade96833bbdcf6bad53ea8500
+➜  ~ docker attach website-it
+helsinki.fi
+Searching..
+sh: 1: curl: not found
+
+➜  ~ docker exec website-it apt-get install -y curl wget
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates krb5-locales libasn1-8-heimdal libcurl3-gnutls libffi6
+  libgmp10 libgnutls30 libgssapi-krb5-2 libgssapi3-heimdal libhcrypto4-heimdal
+  ....
+
+Setting up wget (1.17.1-1ubuntu1.5) ...
+Setting up curl (7.47.0-1ubuntu2.14) ...
+Processing triggers for libc-bin (2.23-0ubuntu11) ...
+Processing triggers for ca-certificates (20190110~16.04.1) ...
+Updating certificates in /etc/ssl/certs...
+127 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+➜  ~ docker attach website-it
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+➜  ~   
+
+
+
+
