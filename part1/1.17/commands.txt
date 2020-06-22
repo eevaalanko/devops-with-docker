@@ -1,0 +1,8 @@
+docker build -t debian-java11 .
+docker run -it debian-java11
+
+docker tag debian-java11 yves6000/debian-java11
+docker login
+docker push yves6000/debian-java11
+
+Image url in DockerHub: https://hub.docker.com/repository/docker/yves6000/debian-java11
