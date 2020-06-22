@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend-example
+    ports:
+      - 3457:5000
+    container_name: frontend-example
+
+  backend:
+    image: backend-example
+    ports:
+      - 3456:8000
+    container_name: backend-example
