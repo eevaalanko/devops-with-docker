@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  redis:
+    image: redis
+    container_name: redis-server
+
+  frontend:
+    image: frontend-example
+    ports:
+      - 3457:5000
+    container_name: frontend-example
+
+  backend:
+    image: backend-example
+    ports:
+      - 3456:8000
+    container_name: backend-example
+    environment:
+      - REDIS=redis-server
+      - REDIS_port=6379
+    depends_on:
+      - redis
