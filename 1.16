@@ -1,0 +1,8 @@
+docker pull devopsdockeruh/heroku-example
+docker tag devopsdockeruh/heroku-example registry.heroku.com/docker-example-yves6000/web
+docker push registry.heroku.com/docker-example-yves6000/web
+brew tap heroku/brew && brew install heroku
+curl https://cli-assets.heroku.com/install.sh | sh
+heroku container:release web -a docker-example-yves6000
+
+URL: https://dashboard.heroku.com/apps/docker-example-yves6000/
