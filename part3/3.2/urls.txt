@@ -1,0 +1,6 @@
+CircleCI: https://app.circleci.com/pipelines/github/eevaalanko/docker-hy.github.io
+## added Environment Variables HEROKU_API_KEY and HEROKU_APP_NAME (=docker-hy-pipeline)
+
+GitHub: https://github.com/eevaalanko/docker-hy.github.io
+
+Heroku: https://dashboard.heroku.com/apps/docker-hy-pipeline
