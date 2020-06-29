@@ -9,6 +9,8 @@ services:
       - POSTGRES_PASSWORD=salasana
       - POSTGRES_USER=user
       - POSTGRES_DB=backend-db
+    volumes:
+      - ./database:/var/lib/postgresql/data
 
   adminer:
     image: adminer
