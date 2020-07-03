@@ -1,0 +1,7 @@
+# old
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+rails-example       latest              4c931593635b        14 seconds ago      1.13GB
+
+# new
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+rails-example       latest              ef50ce310339        14 seconds ago      920MB
