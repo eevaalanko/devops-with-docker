@@ -1,0 +1,7 @@
+# old sizes
+frontend-example    latest              aa5984389101        15 hours ago        753MB
+backend-example     latest              c8f23fe97074        16 hours ago        435MB
+
+# new sizes
+frontend-example    latest              a3be731b3113        5 minutes ago       517MB
+backend-example     latest              859fbf9499dc        2 seconds ago       158MB
